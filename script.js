@@ -45,9 +45,40 @@ function nuclear()
   }
 }
 
+
+let viewBtn0 = document.getElementsByClassName("btn-success")[0];
+let viewBtn1 = document.getElementsByClassName("btn-success")[1];
+let viewBtn2 = document.getElementsByClassName("btn-success")[2];
+let viewBtn3 = document.getElementsByClassName("btn-success")[3];
+let viewBtn4 = document.getElementsByClassName("btn-success")[4];
+let viewBtn5 = document.getElementsByClassName("btn-success")[5];
+
+function minimize()
+{
+  for(let i = 0; i < 6; i++)
+  {
+    if(document.getElementsByClassName("card-img-top")[i].style.width != "20%")
+    {
+      document.getElementsByClassName("card-text")[i].style="display:none";
+      document.getElementsByClassName("card-img-top")[i].style="width:20%";
+    }
+    else if(document.getElementsByClassName("card-text")[i].style.display === "none")
+    {
+      document.getElementsByClassName("card-text")[i].style="display:contents;";
+      document.getElementsByClassName("card-img-top")[i].style="width:100%";
+    }
+  }
+}
+
+
 footer.addEventListener("click", logClick);
 hamburgerMenu.addEventListener("click", toggleHamburger);
 editBtn1.addEventListener("click", toggleRed);
 editBtn2.addEventListener("click", toggleGreen);
 navbar.addEventListener("dblclick", nuclear);
-console.log(navbar);
+viewBtn0.addEventListener("mouseover", minimize);
+viewBtn1.addEventListener("mouseover", minimize);
+viewBtn2.addEventListener("mouseover", minimize);
+viewBtn3.addEventListener("mouseover", minimize);
+viewBtn4.addEventListener("mouseover", minimize);
+viewBtn5.addEventListener("mouseover", minimize);
