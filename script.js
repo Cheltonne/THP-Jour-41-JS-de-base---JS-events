@@ -70,6 +70,17 @@ function minimize()
   }
 }
 
+parent = document.getElementsByClassName("row")[1];
+let children = parent.children;
+let wtfBtn = document.getElementsByClassName("my-2")[1];
+console.log(children);
+
+function wtf()
+{
+  parent.insertBefore(children[5], children[0]);
+}
+
+
 
 footer.addEventListener("click", logClick);
 hamburgerMenu.addEventListener("click", toggleHamburger);
@@ -82,3 +93,4 @@ viewBtn2.addEventListener("mouseover", minimize);
 viewBtn3.addEventListener("mouseover", minimize);
 viewBtn4.addEventListener("mouseover", minimize);
 viewBtn5.addEventListener("mouseover", minimize);
+wtfBtn.addEventListener("click", wtf);
