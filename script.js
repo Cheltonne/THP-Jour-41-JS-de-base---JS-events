@@ -80,7 +80,16 @@ function wtf()
   parent.insertBefore(children[5], children[0]);
 }
 
+document.getElementsByClassName("my-2")[0].addEventListener("click", function(event)
+{
+  event.preventDefault()
+});
 
+let reverseWtfBtn = document.getElementsByClassName("my-2")[0];
+function reverseWtf()
+{
+  parent.insertBefore(children[0], children[5].nextSibling);
+}
 
 footer.addEventListener("click", logClick);
 hamburgerMenu.addEventListener("click", toggleHamburger);
@@ -94,3 +103,4 @@ viewBtn3.addEventListener("mouseover", minimize);
 viewBtn4.addEventListener("mouseover", minimize);
 viewBtn5.addEventListener("mouseover", minimize);
 wtfBtn.addEventListener("click", wtf);
+reverseWtfBtn.addEventListener("click", reverseWtf);
